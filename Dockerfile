@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-
+ADD timezone /etc/timezone
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ADD local /var/lib/locales/supported.d/local
