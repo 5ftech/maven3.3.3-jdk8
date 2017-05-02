@@ -1,5 +1,10 @@
 FROM ubuntu:14.04
 
+ADD local /var/lib/locales/supported.d/local
+RUN locale-gen --purge
+ADD locale /etc/default/locale
+
+
 RUN mkdir -p /usr/share/java
 WORKDIR /usr/share/java
 RUN apt-get update
