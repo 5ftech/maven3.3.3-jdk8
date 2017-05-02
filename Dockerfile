@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 ADD local /var/lib/locales/supported.d/local
 RUN locale-gen --purge
 ADD locale /etc/default/locale
